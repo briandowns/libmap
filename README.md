@@ -34,5 +34,4 @@ free_map(m);
 
 ## TODO
 
-- [ ] make thread safe
 - [ ] add support for buckets
