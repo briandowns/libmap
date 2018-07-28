@@ -1,6 +1,8 @@
 # libmap
 
-libmap is a simple library to proide a map implementation. They keys and values are of type `void*` so we have some freedom. This implementaiton isn't concerned with item ordering which has the benefit of allowing us to left shift easier not to leave any holes.
+libmap is a very simple library to provide a map implementation in c. They keys and values are of type `void*` so we have some freedom to include any keys and values. This implementaiton isn't concerned with item ordering and has the benefit of allowing us to left shift easier to not leave any holes.
+
+I call this simple because the data structure consists of the size of the map and 2 pointers to arrays of void pointers.  Once a key is stored, the value is stored at the same index in the values array. This gives us the ability to find the key and know where the value is.
 
 ## Examples
 
