@@ -7,7 +7,7 @@ libmap is a simple library to proide a map implementation. They keys and values 
 ### Create a new map
 
 ```c
-map_t* m = map_new(100);
+struct Map *m = map_new(100);
 ```
 
 ### Add some values
@@ -22,8 +22,8 @@ map_set(m, "age", &age);
 
 ```c
 printf("first: %s\n", get(m, "first"));  
-void* a = map_get(m, "age");
-printf("age: %d\n", *((int*)a));
+int *a = map_get(map, "age");
+printf("age: %d\n", *a);
 ```
 
 ### Free the memory used by the map
